@@ -1,0 +1,62 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+Infusion.Trading.MarketData.Models/obj/
+Infusion.Trading.MarketData.ZmqServer/bin/
+MarketDataTestBench/bin/
+Infusion.Trading.MarketData.CoreServices/obj/
+Infusion.Trading.MarketData.CoreServices/bin/
+Infusion.Trading.MarketData.ZmqServer/obj/
+MarketDataTestBench/obj/
+Infusion.Trading.MarketData.Client/bin/
+Infusion.Trading.MarketData.Client/obj/
+packages/
+StockTickerTestBench/obj/
+MarketDataFleck/obj/
+MarketDataFleck/bin/
+StockTickerTestBench/bin/
+Infusion.Trading.MarketData.Server/bin/
+Infusion.Trading.MarketData.Server/obj/
+Infusion.Trading.MarketData.Models/bin/
+/trade-platform-mono/*.userprefs
+/*.userprefs
