@@ -60,3 +60,7 @@ Infusion.Trading.MarketData.Server/obj/
 Infusion.Trading.MarketData.Models/bin/
 /trade-platform-mono/*.userprefs
 /*.userprefs
+/.vs/trade-platform/v14/*.suo
+/Infusion.Trading.CoreService/bin/Debug/*.exe
+Debug
+/batch-test/*.rar

@@ -38,13 +38,11 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
                 {
                     socket.OnOpen = () =>
                     {
-                        Console.WriteLine($"Opened fleck server socket at {DateTime.Now.ToString("hh:mm:ss")}");
                         allSockets.Add(socket);
                         isConnected = true;
                     };
                     socket.OnClose = () =>
                     {
-                        Console.WriteLine($"Closed flecker server socket at {DateTime.Now.ToString("hh:mm:ss")}");
                         allSockets.Remove(socket);
                     };
 

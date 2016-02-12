@@ -68,6 +68,9 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
             using (var host = new NancyHost(config, new Uri($"http://{ipAddress.ToString()}:{MarketDataSettings.RestServicePort}")))
             {
                 host.Start();
+
+                Console.WriteLine($"REST services started on port: {MarketDataSettings.RestServicePort}");
+
                 for (;;) { }
             }
         }

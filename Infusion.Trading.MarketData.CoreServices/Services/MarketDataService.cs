@@ -13,20 +13,20 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
         private readonly FleckService fleckService;
         private readonly NancyService nancyService;
 
-        public MarketDataService(IZmqService zmqService, FleckService fleckService, NancyService nancyService)
+        public MarketDataService(FleckService fleckService, NancyService nancyService)
         {
-            if (zmqService == null) throw new ArgumentNullException(nameof(zmqService));
+            //if (zmqService == null) throw new ArgumentNullException(nameof(zmqService));
             if (fleckService == null) throw new ArgumentNullException(nameof(fleckService));
             if (nancyService == null) throw new ArgumentNullException(nameof(nancyService));
 
-            this.zmqService = zmqService;
+            //this.zmqService = zmqService;
             this.fleckService = fleckService;
             this.nancyService = nancyService;
         }
 
         public void Start()
         {
-            zmqService.Start();
+            //zmqService.Start();
             fleckService.Start();
             nancyService.Start();
         }
