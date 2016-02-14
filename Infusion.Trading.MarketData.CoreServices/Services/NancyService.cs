@@ -16,10 +16,10 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
 {
     public class QuotesModule : NancyModule
     {
-        private readonly IQuoteService quoteService;
+        private readonly IQuoteProvider quoteService;
         private readonly IZmqService publishingService;
 
-        public QuotesModule(IQuoteService quoteService, IZmqService publishingService) 
+        public QuotesModule(IQuoteProvider quoteService, IZmqService publishingService) 
             : base("/")
         {
             if (quoteService == null) throw new ArgumentNullException(nameof(quoteService));

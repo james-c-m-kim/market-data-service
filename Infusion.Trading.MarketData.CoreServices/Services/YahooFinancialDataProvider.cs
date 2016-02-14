@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {
-    public class YahooFinancialDataService : IQuoteService
+    public class YahooFinancialDataProvider : IQuoteProvider
     {
         private readonly Uri baseUrl = new Uri("http://query.yahooapis.com/");
 

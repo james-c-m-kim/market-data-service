@@ -4,7 +4,7 @@ using Infusion.Trading.MarketData.Models;
 
 namespace Infusion.Trading.MarketData.CoreServices.Contracts
 {
-    public interface IQuoteService
+    public interface IQuoteProvider
     {
         IList<Quote> GetQuotes(params string[] securityIds);
     }

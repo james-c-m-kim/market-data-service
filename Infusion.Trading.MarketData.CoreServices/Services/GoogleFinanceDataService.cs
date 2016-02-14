@@ -9,7 +9,7 @@ using Infusion.Trading.MarketData.Models;
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {
-    public class GoogleFinanceDataService : IQuoteService
+    public class GoogleFinanceDataService : IQuoteProvider
     {
         private const string EXCHANGE = "NASDAQ";
 

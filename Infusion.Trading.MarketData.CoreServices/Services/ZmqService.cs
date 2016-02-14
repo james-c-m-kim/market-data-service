@@ -14,14 +14,14 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
     public class ZmqService : IDisposable, IZmqService
     {
         private string Id = Guid.NewGuid().ToString();
-        private readonly IQuoteService primitiveQuoteService;
+        private readonly IQuoteProvider primitiveQuoteService;
         private static readonly List<string> subscribedTickerList = new List<string>();
         private readonly NetMQContext socketFactory;
         private readonly int refreshInterval;
 
         public event Action<IList<Quote>> HandleTickerInfoPublish;
 
-        public ZmqService(YahooFinancialDataService primitiveQuoteService)
+        public ZmqService(YahooFinancialDataProvider primitiveQuoteService)
         {
             this.primitiveQuoteService = primitiveQuoteService;
             

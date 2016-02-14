@@ -38,9 +38,9 @@ namespace Infusion.Trading.MarketData.CoreServices.Unity
 
         private void Register()
         {
-            if (!unityContainer.IsRegistered<IQuoteService>())
+            if (!unityContainer.IsRegistered<IQuoteProvider>())
             {
-                unityContainer.RegisterType<IQuoteService, YahooFinancialDataService>(new ContainerControlledLifetimeManager());
+                unityContainer.RegisterType<IQuoteProvider, YahooFinancialDataProvider>(new ContainerControlledLifetimeManager());
             }
 
             if (!unityContainer.IsRegistered<IZmqService>())

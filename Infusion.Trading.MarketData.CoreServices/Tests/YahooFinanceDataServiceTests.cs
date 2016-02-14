@@ -9,7 +9,7 @@ namespace Infusion.Trading.MarketData.CoreServices.tests
         [Test]
         public void ShouldFetchQuotes()
         {
-            var svc = new YahooFinancialDataService();
+            var svc = new YahooFinancialDataProvider();
             var quotes = svc.GetQuotes("MSFT", "GOOG", "AAPL");
             Assert.That(quotes, Is.Not.Null);
             Assert.That(quotes.Count, Is.Not.LessThanOrEqualTo(0));
