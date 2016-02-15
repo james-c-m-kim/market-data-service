@@ -64,3 +64,4 @@ Infusion.Trading.MarketData.Models/bin/
 /Infusion.Trading.CoreService/bin/Debug/*.exe
 Debug
 /batch-test/*.rar
+/*.user
