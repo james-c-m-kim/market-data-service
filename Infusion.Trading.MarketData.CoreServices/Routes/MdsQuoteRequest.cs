@@ -5,6 +5,7 @@ using ServiceStack;
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {
+    [AddHeader(ContentType = MimeTypes.Json)]
     [Route("/quote/{Id}", "GET", Summary = @"Fetch quote details for a symbol.")]
     public class MdsQuoteRequest : IReturn<List<Quote>>
     {
@@ -16,6 +17,7 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
         }
     }
 
+    [AddHeader(ContentType = MimeTypes.Json)]
     [Route("/history/{Id}/{Start}/{End}", "GET", Summary = @"Fetch quote history details for a symbol.")]
     public class MdsHistoricalQuoteRequest : IReturn<IList<HistoricalQuote>>
     {

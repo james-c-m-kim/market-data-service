@@ -2,6 +2,7 @@
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {
+    [AddHeader(ContentType = MimeTypes.Json)]
     [Route("/subscribe/{Id}", "GET", Summary = @"Add a symbol to the websocket subscription channel.")]
     public class MdsGenericRequest : IReturn<string>
     {

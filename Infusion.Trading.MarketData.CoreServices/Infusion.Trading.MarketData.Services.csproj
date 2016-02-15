@@ -145,7 +145,6 @@
   <ItemGroup>
     <Compile Include="Contracts\IQuoteProvider.cs" />
     <Compile Include="Services\FleckService.cs" />
-    <Compile Include="Services\GoogleFinanceDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\IZmqService.cs" />
     <Compile Include="Services\MarketDataService.cs" />
@@ -155,7 +154,6 @@
     <Compile Include="Services\NancyService.cs" />
     <Compile Include="Services\SStackService.cs" />
     <Compile Include="Services\YahooFinancialDataProvider.cs" />
-    <Compile Include="Tests\GoogleFinanceDataQuoteServiceTests.cs" />
     <Compile Include="Tests\YahooFinanceDataServiceTests.cs" />
     <Compile Include="Unity\InfusionBootstrapper.cs" />
     <Compile Include="Services\ZmqService.cs" />

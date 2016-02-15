@@ -41,10 +41,13 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
         public override void Configure(Container container)
         {
             container.Register(InfusionBootstrapper.Instance.Container.Resolve<MdsRepository>());
+            
             Plugins.Add(new SwaggerFeature());
             SetConfig(new HostConfig
             {
-                EnableFeatures = Feature.All.Remove(Feature.Metadata),
+
+                DefaultContentType = MimeTypes.Json,
+                //EnableFeatures = Feature.All.Remove(Feature.Html),
                 DefaultRedirectPath = "/swagger-ui"
             });
         }
