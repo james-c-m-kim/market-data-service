@@ -10,6 +10,7 @@ using Infusion.Trading.MarketData.CoreServices.Unity;
 using Infusion.Trading.MarketData.Models.Util;
 using ServiceStack;
 using ServiceStack.Api.Swagger;
+using ServiceStack.Text;
 
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
@@ -41,13 +42,12 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
         public override void Configure(Container container)
         {
             container.Register(InfusionBootstrapper.Instance.Container.Resolve<MdsRepository>());
-            
+            JsConfig.DateHandler = DateHandler.ISO8601;
             Plugins.Add(new SwaggerFeature());
             SetConfig(new HostConfig
             {
-
+               
                 DefaultContentType = MimeTypes.Json,
-                //EnableFeatures = Feature.All.Remove(Feature.Html),
                 DefaultRedirectPath = "/swagger-ui"
             });
         }

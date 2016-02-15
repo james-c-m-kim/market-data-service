@@ -295,7 +295,7 @@
 				$strip.children('li').addClass('old');
 				for (var i = 0; i < list.length; i++) {
 					id = $(list[i]).data('update');
-					match = $strip.find('[data-update="'+id+'"]');//should try find the id or data-attribute.
+					match = $strip.find('[data-update="'+id+'"]');//should try find the Symbol or data-attribute.
 					if (match.length < 1){
 						if (insert){
 							//we need to move this item into the dom

@@ -16,6 +16,7 @@ namespace Infusion.Trading.MarketData.Models
         //     "Volume": "9001300",
         //     "Adj_Close": "146.130005"
         //    },    
+        public DateTime? AsOf { get; set; }
         public string Symbol { get; set; }
         public DateTime? Date { get; set; }
         public decimal? Open { get; set; }
@@ -24,7 +25,6 @@ namespace Infusion.Trading.MarketData.Models
         public decimal? CLose { get; set; }
         public int? Volume { get; set; }
         public decimal? Adj_Close { get; set; }
-        public DateTime? AsOf { get; set; }
     }
     public class Quote
     {

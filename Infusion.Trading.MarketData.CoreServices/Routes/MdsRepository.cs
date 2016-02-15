@@ -36,9 +36,9 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
                 // divide up into 12 month increments
                 var numYrs = period.Months/12;
                 if (period.Months%12 > 0)
-                    numYrs++;
+                    numYrs++ ;
 
-                var result = Enumerable.Range(start.Year, (int) numYrs + start.Year).Select(yr =>
+                var rangeOfDates = Enumerable.Range(start.Year, (int) numYrs + 1).Select(yr =>
                 {
                     // if it's the start yr, use start month/day else use jan - dec
                     var startMonth = yr == start.Year ? start.Month : 1;
@@ -49,25 +49,27 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
                     var rangeStart = new DateTime(yr, startMonth, startDay);
                     var rangeEnd = new DateTime(yr, endMonth, endDay);
                     return new {Start = rangeStart, End = rangeEnd};
-                }).AsParallel().SelectMany(parm => quoteProvider.GetQuoteHistory(request.Id, parm.Start, parm.End));
+                }).ToList();
+                
+                var result = rangeOfDates.AsParallel().SelectMany(parm => quoteProvider.GetQuoteHistory(request.Symbol, parm.Start, parm.End)).ToList();
 
-                return result.ToList();
+                return result;
             }
             else
             {
-                return quoteProvider.GetQuoteHistory(request.Id, request.Start, request.End);
+                return quoteProvider.GetQuoteHistory(request.Symbol, request.Start, request.End);
             }
         } 
 
         public Quote GetBySymbol(MdsQuoteRequest request)
         {
-            return quoteProvider.GetQuotes(request.Id).FirstOrDefault();
+            return quoteProvider.GetQuotes(request.Symbol).FirstOrDefault();
         }
 
         public string SubscribeBySymbol(MdsGenericRequest request)
         {
-            publishingService.SubscribeTicker(request.Id);
-            return $"{request.Id} has been subscribed.";
+            publishingService.SubscribeTicker(request.Symbol);
+            return $"{request.Symbol} has been subscribed.";
         }
     }
 }

@@ -6,28 +6,31 @@ using ServiceStack;
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {
     [AddHeader(ContentType = MimeTypes.Json)]
-    [Route("/quote/{Id}", "GET", Summary = @"Fetch quote details for a symbol.")]
+    [Route("/quote/{Symbol}", "GET", Summary = @"Fetch quote details for a symbol.")]
     public class MdsQuoteRequest : IReturn<List<Quote>>
     {
-        public string Id { get; set; }
+        public string Symbol { get; set; }
 
-        public MdsQuoteRequest(string id)
+        public MdsQuoteRequest(string symbol)
         {
-            this.Id = id;
+            this.Symbol = symbol;
         }
     }
 
     [AddHeader(ContentType = MimeTypes.Json)]
-    [Route("/history/{Id}/{Start}/{End}", "GET", Summary = @"Fetch quote history details for a symbol.")]
+    [Route("/history/{Symbol}/{Start}/{End}", "GET", Summary = @"Fetch quote history details for a symbol.")]
     public class MdsHistoricalQuoteRequest : IReturn<IList<HistoricalQuote>>
     {
-        public string Id { get; set; }
+        [ApiMember(IsRequired = true)]
+        public string Symbol { get; set; }
+        [ApiMember(Description = "(YYYY-MM-DD)", IsRequired = true)]
         public DateTime Start { get; set; }
+        [ApiMember(Description = "(YYYY-MM-DD)", IsRequired = true)]
         public DateTime End { get; set; }
 
-        public MdsHistoricalQuoteRequest(string id)
+        public MdsHistoricalQuoteRequest(string symbol)
         {
-            this.Id = id;
+            this.Symbol = symbol;
         }
     }
 }
