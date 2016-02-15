@@ -4,4 +4,9 @@
     {
         public QueryDetail query { get; set; }
     }
+
+    public class HistoricalQuoteReponse
+    {
+        public HistoricalQueryDetail query { get; set; }
+    }
 }

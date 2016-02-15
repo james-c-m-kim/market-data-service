@@ -8,4 +8,10 @@ namespace Infusion.Trading.MarketData.Models.Serialization
         [JsonConverter(typeof(SingleOrArrayConverter<Quote>))]
         public IList<Quote> quote { get; set; }
     }
+
+    public class HistoricalQuoteListWrapper
+    {
+        [JsonConverter(typeof(SingleOrArrayConverter<HistoricalQuote>))]
+        public IList<HistoricalQuote> quote { get; set; }
+    }
 }

@@ -3,6 +3,29 @@ using Newtonsoft.Json;
 
 namespace Infusion.Trading.MarketData.Models
 {
+    public class HistoricalQuote
+    {
+        //"quote": [
+        //    {
+        //     "Symbol": "GS",
+        //     "Date": "2016-02-12",
+        //     "Open": "143.75",
+        //     "High": "146.509995",
+        //     "Low": "143.699997",
+        //     "Close": "146.130005",
+        //     "Volume": "9001300",
+        //     "Adj_Close": "146.130005"
+        //    },    
+        public string Symbol { get; set; }
+        public DateTime? Date { get; set; }
+        public decimal? Open { get; set; }
+        public decimal? High { get; set; }
+        public decimal? Low { get; set; }
+        public decimal? CLose { get; set; }
+        public int? Volume { get; set; }
+        public decimal? Adj_Close { get; set; }
+        public DateTime? AsOf { get; set; }
+    }
     public class Quote
     {
         public DateTime? AsOf { get; set; }
