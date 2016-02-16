@@ -23,10 +23,8 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
             this.publishingService = publishingService;
         }
 
-
         public IList<HistoricalQuote> GetHistoryBySymbol(MdsHistoricalQuoteRequest request)
         {
-            //if((request.End - request.Start).
             var start = new LocalDate(request.Start.Year, request.Start.Month, request.Start.Day);
             var end = new LocalDate(request.End.Year, request.End.Month, request.End.Day);
             var period = Period.Between(start, end, PeriodUnits.Months);

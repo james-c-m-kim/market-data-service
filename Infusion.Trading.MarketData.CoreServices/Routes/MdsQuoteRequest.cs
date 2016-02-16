@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Infusion.Trading.MarketData.Models;
 using ServiceStack;
@@ -17,20 +16,9 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
         }
     }
 
-    [AddHeader(ContentType = MimeTypes.Json)]
-    [Route("/history/{Symbol}/{Start}/{End}", "GET", Summary = @"Fetch quote history details for a symbol.")]
-    public class MdsHistoricalQuoteRequest : IReturn<IList<HistoricalQuote>>
-    {
-        [ApiMember(IsRequired = true)]
-        public string Symbol { get; set; }
-        [ApiMember(Description = "(YYYY-MM-DD)", IsRequired = true)]
-        public DateTime Start { get; set; }
-        [ApiMember(Description = "(YYYY-MM-DD)", IsRequired = true)]
-        public DateTime End { get; set; }
+    // return null if user is not AUTH'd
+    // https://www.yammer.com/api/v1/users/current.json
 
-        public MdsHistoricalQuoteRequest(string symbol)
-        {
-            this.Symbol = symbol;
-        }
-    }
+    // the auth url which should bring user back to us when done
+    // https://www.yammer.com/oauth2/authorize?client_id=rwKNTVw2idIza5XShMiQw&redirect_uri={redirect_url}
 }
