@@ -53,13 +53,14 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
             Plugins.Add(new AuthFeature(() => new AuthUserSession(),
                 new IAuthProvider[]
                 {
-                    new YammerAuthProvider(appSettings)
-                    {
-                        RedirectUrl = "http://192.168.1.154:2223",
-                        CallbackUrl = "http://192.168.1.154:2223/auth/yammer",
-                        ClientId = "rwKNTVw2idIza5XShMiQw",
-                        ClientSecret = "9e9X1kpJx96mA44nsBY6flCfsnyN7fgE7s9bmQVo",
-                    }
+
+                    //new YammerAuthProvider(appSettings)
+                    //{
+                    //    RedirectUrl = "http://192.168.1.154:2223",
+                    //    CallbackUrl = "http://192.168.1.154:2223/auth/yammer",
+                    //    ClientId = "rwKNTVw2idIza5XShMiQw",
+                    //    ClientSecret = "9e9X1kpJx96mA44nsBY6flCfsnyN7fgE7s9bmQVo",
+                    //}
                 }));
             Plugins.Add(new RegistrationFeature());
 
