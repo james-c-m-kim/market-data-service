@@ -1,15 +1,7 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-using DotNetOpenAuth.OAuth.ChannelElements;
-using DotNetOpenAuth.OpenId.Provider;
-using Microsoft.Practices.Unity;
 using Funq;
+using Infusion.Trading.MarketData.CoreServices.Routes;
 using Infusion.Trading.MarketData.CoreServices.Unity;
-using Infusion.Trading.MarketData.Models.Util;
+using Microsoft.Practices.Unity;
 using ServiceStack;
 using ServiceStack.Api.Swagger;
 using ServiceStack.Auth;
@@ -17,27 +9,8 @@ using ServiceStack.Caching;
 using ServiceStack.Configuration;
 using ServiceStack.Text;
 
-
-namespace Infusion.Trading.MarketData.CoreServices.Services
+namespace Infusion.Trading.MarketData.CoreServices.Services.ServiceStack
 {
-    public class SStackService
-    {
-        public void Start()
-        {
-            var hostname = Dns.GetHostName();
-            var uriList = Dns.GetHostAddresses(hostname);
-
-            if (uriList.All(u => u.AddressFamily != AddressFamily.InterNetwork)) return;
-
-            var ipAddress = uriList.First(u => u.AddressFamily == AddressFamily.InterNetwork);
-            var startUrl = $"http://{ipAddress.ToString()}:{MarketDataSettings.RestServicePort}/";
-            var appHost = InfusionBootstrapper.Instance.Container.Resolve<AppHost>();
-            appHost.Init();
-            appHost.Start(startUrl);
-            Console.WriteLine($"REST services started on: {startUrl}");
-        }
-    }
-
     public class AppHost : AppHostHttpListenerBase
     {
         public AppHost() : base("MdsService", typeof (MdsQuoteRequest).Assembly)
@@ -73,27 +46,6 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
                 DefaultContentType = MimeTypes.Json,
                 DefaultRedirectPath = "/swagger-ui"
             });
-        }
-    }
-
-    [Authenticate]
-    public class MdsSubService : Service
-    {
-        public MdsRepository Repository { get; set; }
-
-        public object Get(MdsQuoteRequest request)
-        {
-            return Repository.GetBySymbol(request);
-        }
-
-        public object Get(MdsHistoricalQuoteRequest request)
-        {
-            return Repository.GetHistoryBySymbol(request);
-        }
-
-        public object Get(MdsGenericRequest request)
-        {
-            return Repository.SubscribeBySymbol(request);
         }
     }
 }

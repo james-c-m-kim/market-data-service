@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Infusion.Trading.MarketData.CoreServices.Contracts;
+using Infusion.Trading.MarketData.CoreServices.DataProviders;
 using Infusion.Trading.MarketData.Models;
 using Infusion.Trading.MarketData.Models.Util;
 using NetMQ;

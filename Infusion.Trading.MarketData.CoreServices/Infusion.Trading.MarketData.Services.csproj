@@ -163,8 +163,10 @@
     <Compile Include="Routes\MdsQuoteRequest.cs" />
     <Compile Include="Routes\MdsRepository.cs" />
     <Compile Include="Services\NancyService.cs" />
-    <Compile Include="Services\SStackService.cs" />
-    <Compile Include="Services\YahooFinancialDataProvider.cs" />
+    <Compile Include="Services\ServiceStack\AppHost.cs" />
+    <Compile Include="Services\ServiceStack\MdsSubService.cs" />
+    <Compile Include="Services\ServiceStack\SStackService.cs" />
+    <Compile Include="DataProviders\YahooFinancialDataProvider.cs" />
     <Compile Include="Tests\YahooFinanceDataServiceTests.cs" />
     <Compile Include="Unity\InfusionBootstrapper.cs" />
     <Compile Include="Services\ZmqService.cs" />

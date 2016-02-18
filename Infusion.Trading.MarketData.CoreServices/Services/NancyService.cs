@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 using Infusion.Trading.MarketData.CoreServices.Contracts;
 using Infusion.Trading.MarketData.Models;
 using Infusion.Trading.MarketData.Models.Util;
 using Nancy;
 using Nancy.Hosting.Self;
-using Nancy.ModelBinding;
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {

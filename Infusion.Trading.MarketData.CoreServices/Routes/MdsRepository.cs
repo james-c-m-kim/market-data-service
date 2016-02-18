@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Infusion.Trading.MarketData.CoreServices.Contracts;
 using Infusion.Trading.MarketData.Models;
 using NodaTime;
 
-namespace Infusion.Trading.MarketData.CoreServices.Services
+namespace Infusion.Trading.MarketData.CoreServices.Routes
 {
     public class MdsRepository
     {

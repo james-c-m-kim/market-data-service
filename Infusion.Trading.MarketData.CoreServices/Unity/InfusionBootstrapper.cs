@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Infusion.Trading.MarketData.CoreServices.Contracts;
+using Infusion.Trading.MarketData.CoreServices.DataProviders;
 using Infusion.Trading.MarketData.CoreServices.Services;
 using Microsoft.Practices.Unity;
 

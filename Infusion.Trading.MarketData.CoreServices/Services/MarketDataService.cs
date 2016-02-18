@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Infusion.Trading.MarketData.CoreServices.Contracts;
+using Infusion.Trading.MarketData.CoreServices.Services.ServiceStack;
 
 namespace Infusion.Trading.MarketData.CoreServices.Services
 {

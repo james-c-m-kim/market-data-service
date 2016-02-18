@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Infusion.Trading.MarketData.Models;
 using ServiceStack;
 
-namespace Infusion.Trading.MarketData.CoreServices.Services
+namespace Infusion.Trading.MarketData.CoreServices.Routes
 {
     [AddHeader(ContentType = MimeTypes.Json)]
     [Route("/history/{Symbol}/{Start}/{End}", "GET", Summary = @"Fetch quote history details for a symbol.")]

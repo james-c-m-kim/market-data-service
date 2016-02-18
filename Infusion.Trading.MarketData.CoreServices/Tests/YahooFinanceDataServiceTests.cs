@@ -1,4 +1,5 @@
-﻿using Infusion.Trading.MarketData.CoreServices.Services;
+﻿using Infusion.Trading.MarketData.CoreServices.DataProviders;
+using Infusion.Trading.MarketData.CoreServices.Services;
 using NUnit.Framework;
 
 namespace Infusion.Trading.MarketData.CoreServices.tests

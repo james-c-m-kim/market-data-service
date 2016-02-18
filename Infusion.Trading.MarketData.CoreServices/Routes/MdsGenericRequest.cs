@@ -1,6 +1,6 @@
 ﻿using ServiceStack;
 
-namespace Infusion.Trading.MarketData.CoreServices.Services
+namespace Infusion.Trading.MarketData.CoreServices.Routes
 {
     [AddHeader(ContentType = MimeTypes.Json)]
     [Route("/subscribe/{Symbol}", "GET", Summary = @"Add a symbol to the websocket subscription channel.")]

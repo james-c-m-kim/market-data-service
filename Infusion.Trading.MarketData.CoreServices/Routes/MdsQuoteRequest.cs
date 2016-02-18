@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Infusion.Trading.MarketData.Models;
 using ServiceStack;
 
-namespace Infusion.Trading.MarketData.CoreServices.Services
+namespace Infusion.Trading.MarketData.CoreServices.Routes
 {
     [AddHeader(ContentType = MimeTypes.Json)]
     [Route("/quote/{Symbol}", "GET", Summary = @"Fetch quote details for a symbol.")]

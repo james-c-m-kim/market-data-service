@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Infusion.Trading.MarketData.CoreServices.Contracts;
 using Infusion.Trading.MarketData.Models;
 using Infusion.Trading.MarketData.Models.Serialization;
-using Newtonsoft.Json;
 using ServiceStack;
 
-namespace Infusion.Trading.MarketData.CoreServices.Services
+namespace Infusion.Trading.MarketData.CoreServices.DataProviders
 {
     public class YahooFinancialDataProvider : IQuoteProvider
     {
