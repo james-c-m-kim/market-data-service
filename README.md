@@ -12,3 +12,7 @@ NeTV via HTTP API for now.
 - Less, but better: lightweight components that build up to a robust and highly functional server
 - Full service client libraries: library support for rich client apps to connect to server
 - Agnostic client support: fully support http://, ws:// and tcp:// via JSON-based contracts
+
+## update
+Feb 25 2015: integrated slack!
+
