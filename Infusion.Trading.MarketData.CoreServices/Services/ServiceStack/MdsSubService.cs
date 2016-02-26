@@ -20,7 +20,23 @@ namespace Infusion.Trading.MarketData.CoreServices.Services.ServiceStack
 
         public object Get(MdsGenericRequest request)
         {
-            return Repository.SubscribeBySymbol(request);
+            return Repository.SetSubscriptionBySymbol(request);
+        }
+
+        public object Get(MdsLeaderboardRequest request)
+        {
+            return Repository.GetLeaderboardItems(request.MaxCount);
+        }
+
+        public object Get(MdsTrendingRequest request)
+        {
+            return Repository.GetTrendingStocks(request.MaxCount);
+        }
+
+        public object Get(MdsPortfolioRequest request)
+        {
+            var userName = "blah";
+            return Repository.GetPortfolio(userName);
         }
     }
 }

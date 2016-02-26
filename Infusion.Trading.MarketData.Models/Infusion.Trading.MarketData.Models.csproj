@@ -70,12 +70,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="HoldingInfo.cs" />
+    <Compile Include="LeaderboardItem.cs" />
     <Compile Include="OptionType.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderDurationType.cs" />
     <Compile Include="OrderFill.cs" />
+    <Compile Include="OrderInfo.cs" />
     <Compile Include="OrderStatus.cs" />
     <Compile Include="OrderType.cs" />
+    <Compile Include="Portfolio.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductType.cs" />

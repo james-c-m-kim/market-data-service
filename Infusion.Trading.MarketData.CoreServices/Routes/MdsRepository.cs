@@ -63,10 +63,118 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
             return quoteProvider.GetQuotes(request.Symbol).FirstOrDefault();
         }
 
-        public string SubscribeBySymbol(MdsGenericRequest request)
+        public string SetSubscriptionBySymbol(MdsGenericRequest request)
         {
             publishingService.SubscribeTicker(request.Symbol);
             return $"{request.Symbol} has been subscribed.";
+        }
+
+        public IList<LeaderboardItem> GetLeaderboardItems(int maxCount)
+        {
+            return new List<LeaderboardItem>
+            {
+                new LeaderboardItem
+                {
+                    UserFriendlyName = "Bill Gates",
+                    PortfolioValue = int.MaxValue
+                },
+                new LeaderboardItem
+                {
+                    UserFriendlyName = "Steve Zuckberg",
+                    PortfolioValue = 10000000000
+                },
+                new LeaderboardItem
+                {
+                    UserFriendlyName = "Steven Spielberg",
+                    PortfolioValue = 100000000
+                },
+                new LeaderboardItem
+                {
+                    UserFriendlyName = "Jimmy Bob",
+                    PortfolioValue = 40000000
+                },
+                new LeaderboardItem
+                {
+                    UserFriendlyName = "Billy Bob",
+                    PortfolioValue = 20000000
+                },
+
+            };
+        }
+
+        public IList<Quote> GetTrendingStocks(int maxCount)
+        {
+            var quotes = quoteProvider.GetQuotes("MSFT", "GOOG", "GS", "MS", "YHOO");
+            return quotes.ToList();
+        }
+
+        public Portfolio GetPortfolio(string userName)
+        {
+            return new Portfolio
+            {
+                CurrentHoldings = new List<HoldingInfo>
+                {
+                    new HoldingInfo
+                    {
+                        Symbol = "MSFT",
+                        CurrentPrice = 100m,
+                        Quantity = 4000
+                    },
+                    new HoldingInfo
+                    {
+                        Symbol = "GOOG",
+                        CurrentPrice = 350m,
+                        Quantity = 1000
+                    },
+                    new HoldingInfo
+                    {
+                        Symbol = "CS",
+                        CurrentPrice = 14m,
+                        Quantity = 5000
+                    }
+                },
+                PastOrders = new List<OrderInfo>
+                {
+                    new OrderInfo
+                    {
+                        Symbol = "YHOO",
+                        Quantity = -500,
+                        TransactionPrice = 35m,
+                        TransactionDate = DateTime.Now.AddDays(-15)
+                    },
+                    new OrderInfo
+                    {
+                        Symbol = "YHOO",
+                        Quantity = -1500,
+                        TransactionPrice = 33m,
+                        TransactionDate = DateTime.Now.AddDays(-10)
+                    },
+                    new OrderInfo
+                    {
+                        Symbol = "YHOO",
+                        Quantity = -2500,
+                        TransactionPrice = 30m,
+                        TransactionDate = DateTime.Now.AddDays(-9)
+                    },
+                    new OrderInfo
+                    {
+                        Symbol = "YHOO",
+                        Quantity = -2500,
+                        TransactionPrice = 25m,
+                        TransactionDate = DateTime.Now.AddDays(-4)
+                    },
+                },
+                PendingOrders = new List<OrderInfo>
+                {
+                    new OrderInfo
+                    {
+                        Symbol = "CS",
+                        Quantity = -5000,
+                        TransactionPrice = 12m,
+                        TransactionDate = DateTime.Now.AddHours(-2)
+                    },
+                }
+            };
         }
     }
 }
