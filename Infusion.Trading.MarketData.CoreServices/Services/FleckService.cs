@@ -38,6 +38,7 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
                 {
                     socket.OnOpen = () =>
                     {
+                        //socket.ConnectionInfo.Path
                         allSockets.Add(socket);
                         isConnected = true;
                     };

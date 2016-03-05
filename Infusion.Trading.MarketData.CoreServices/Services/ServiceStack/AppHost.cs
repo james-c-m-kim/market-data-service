@@ -35,7 +35,7 @@ namespace Infusion.Trading.MarketData.CoreServices.Services.ServiceStack
                     //    ClientSecret = "9e9X1kpJx96mA44nsBY6flCfsnyN7fgE7s9bmQVo",
                     //}
                 }));
-            Plugins.Add(new RegistrationFeature());
+            //Plugins.Add(new RegistrationFeature());
 
             container.Register<ICacheClient>(new MemoryCacheClient());
             var userRep = new InMemoryAuthRepository();

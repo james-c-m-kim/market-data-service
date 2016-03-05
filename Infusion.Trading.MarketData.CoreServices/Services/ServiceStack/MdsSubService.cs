@@ -38,5 +38,10 @@ namespace Infusion.Trading.MarketData.CoreServices.Services.ServiceStack
             var userName = "blah";
             return Repository.GetPortfolio(userName);
         }
+
+        public object Post(MdsOrderRequest request)
+        {
+            return Repository.PostOrder(request);
+        }
     }
 }

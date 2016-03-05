@@ -176,5 +176,23 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
                 }
             };
         }
+
+        public OrderInfo PostOrder(MdsOrderRequest request)
+        {
+            var quote = quoteProvider.GetQuotes(request.Symbol).FirstOrDefault();
+            if (quote == null)
+            {
+                return new OrderInfo();
+            }
+
+            return new OrderInfo
+            {
+                Symbol = request.Symbol,
+                Quantity = request.Quantity,
+                OrderId = Guid.NewGuid(),
+                TransactionDate = DateTime.Now,
+                TransactionPrice = quote.Ask ?? 0m
+            };
+        }
     }
 }

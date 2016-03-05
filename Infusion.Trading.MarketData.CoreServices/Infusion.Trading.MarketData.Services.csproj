@@ -158,6 +158,7 @@
     <Compile Include="Routes\MdsLeaderboardRequest.cs" />
     <Compile Include="Routes\MdsPortfolioRequest.cs" />
     <Compile Include="Routes\MdsTrendingRequest.cs" />
+    <Compile Include="Routes\MdsOrderRequest.cs" />
     <Compile Include="Services\FleckService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\IZmqService.cs" />
