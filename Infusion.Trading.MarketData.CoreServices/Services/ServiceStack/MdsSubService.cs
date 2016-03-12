@@ -1,5 +1,9 @@
+using System.Web.ModelBinding;
 using Infusion.Trading.MarketData.CoreServices.Routes;
+using Newtonsoft.Json;
 using ServiceStack;
+using ServiceStack.Html;
+using ServiceStack.Text;
 
 namespace Infusion.Trading.MarketData.CoreServices.Services.ServiceStack
 {
@@ -41,6 +45,12 @@ namespace Infusion.Trading.MarketData.CoreServices.Services.ServiceStack
 
         public object Post(MdsOrderRequest request)
         {
+            if (string.IsNullOrEmpty(request.Symbol))
+            {
+                var rawBody = base.Request.GetRawBody();
+                request = JsonConvert.DeserializeObject<MdsOrderRequest>(rawBody);
+            }
+
             return Repository.PostOrder(request);
         }
     }
