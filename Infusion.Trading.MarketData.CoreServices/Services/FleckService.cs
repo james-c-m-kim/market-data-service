@@ -60,11 +60,13 @@ namespace Infusion.Trading.MarketData.CoreServices.Services
                     if (!isConnected || listOfQuotes == null) return;
 
                     // push the list of quotes down on the websockets
-                    foreach (var quote in listOfQuotes)
-                    {
-                        var quoteString = JsonConvert.SerializeObject(quote);
-                        allSockets.ToList().ForEach(s => s.Send(quoteString));
-                    }
+                    var quoteString = JsonConvert.SerializeObject(listOfQuotes.Select(q => new {symbol = q.Symbol}).ToList());
+                    allSockets.ToList().ForEach(s => s.Send(quoteString));
+                    //foreach (var quote in listOfQuotes)
+                    //{
+                    //    var quoteString = JsonConvert.SerializeObject(quote);
+                    //    allSockets.ToList().ForEach(s => s.Send(quoteString));
+                    //}
                 };
             });
         }

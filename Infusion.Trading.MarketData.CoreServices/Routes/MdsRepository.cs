@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Infusion.Trading.MarketData.CoreServices.Contracts;
+using Infusion.Trading.MarketData.CoreServices.Services;
 using Infusion.Trading.MarketData.Models;
 using NodaTime;
 
@@ -11,6 +12,7 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
     {
         private readonly IQuoteProvider quoteProvider;
         private readonly IZmqService publishingService;
+        //private readonly FleckService fleckService;
         private List<Quote> quotes = new List<Quote>();
 
         public MdsRepository(IQuoteProvider quoteProvider, IZmqService publishingService)
@@ -60,7 +62,9 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
 
         public Quote GetBySymbol(MdsQuoteRequest request)
         {
-            return quoteProvider.GetQuotes(request.Symbol).FirstOrDefault();
+            var result = quoteProvider.GetQuotes(request.Symbol).FirstOrDefault();
+            if (result != null) publishingService.SubscribeTicker(request.Symbol);
+            return result;
         }
 
         public string SetSubscriptionBySymbol(MdsGenericRequest request)
