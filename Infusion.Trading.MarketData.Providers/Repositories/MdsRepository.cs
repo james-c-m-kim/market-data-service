@@ -70,7 +70,7 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
 
         public IList<LeaderboardItem> GetLeaderboardItems(int maxCount)
         {
-            return new List<LeaderboardItem>
+            var result = new List<LeaderboardItem>
             {
                 new LeaderboardItem
                 {
@@ -99,12 +99,14 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
                 },
 
             };
+
+            return result.Take(maxCount).ToList();
         }
 
         public IList<Quote> GetTrendingStocks(int maxCount)
         {
             var quotes = quoteProvider.GetQuotes("MSFT", "GOOG", "GS", "MS", "YHOO");
-            return quotes.ToList();
+            return quotes.Take(maxCount).ToList();
         }
 
         public Portfolio GetPortfolio(string userName)

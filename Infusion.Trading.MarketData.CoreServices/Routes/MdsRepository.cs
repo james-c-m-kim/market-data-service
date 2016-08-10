@@ -108,8 +108,8 @@ namespace Infusion.Trading.MarketData.CoreServices.Routes
 
         public IList<Quote> GetTrendingStocks(int maxCount)
         {
-            var quotes = quoteProvider.GetQuotes("MSFT", "GOOG", "GS", "MS", "YHOO");
-            return quotes.ToList();
+            var result = quoteProvider.GetQuotes("MSFT", "GOOG", "GS", "MS", "YHOO");
+            return result.Take(maxCount).ToList();
         }
 
         public Portfolio GetPortfolio(string userName)
