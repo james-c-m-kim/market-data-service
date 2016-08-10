@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net451": {
+      "bin": {
+        "assembly": "../../lib/ServiceStack.Common.dll",
+        "pdb": "../../lib/ServiceStack.Common.pdb"
+      },
+      "dependencies": {
+        "ServiceStack.Interfaces": "1.0.0-*",
+        "ServiceStack.Text": "1.0.0-*"
+      }
+    }
+  }
+}

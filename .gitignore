@@ -67,3 +67,5 @@ Debug
 /*.user
 /Infusion.Trading.MarketData.Server/*.user
 /Infusion.Trading.MarketData.CoreServices/*.user
+artifacts/
+trade-demo-service/trade-demo-service.xproj.user
