@@ -1,0 +1,582 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.5.1": {
+      "AutoFixture/3.20.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        }
+      },
+      "Castle.Core/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Infusion.Trading.MarketData.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "AutoFixture": "3.20.0",
+          "Castle.Core": "3.3.1",
+          "Moq": "4.2.1507.118",
+          "Newtonsoft.Json": "7.0.1",
+          "NSubstitute": "1.8.1",
+          "NUnit": "2.6.4",
+          "TestStack.Dossier": "3.1.1"
+        }
+      },
+      "Microsoft.Composition/1.0.30": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll": {}
+        }
+      },
+      "Moq/4.2.1507.118": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Moq.dll": {}
+        }
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NodaTime/2.0.0-alpha20160729": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NodaTime.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NodaTime.dll": {}
+        }
+      },
+      "NSubstitute/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NSubstitute.dll": {}
+        }
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
+      "ServiceStack/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Client": "1.0.0",
+          "ServiceStack.Common": "1.0.0",
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "ServiceStack.Text/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "TestStack.Dossier/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoFixture": "3.20.0",
+          "Castle.Core": "3.3.1",
+          "NSubstitute": "1.8.1"
+        },
+        "compile": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        }
+      },
+      "Unity/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Practices.Unity.Configuration.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Practices.Unity.Configuration.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.1/win7-x64": {
+      "AutoFixture/3.20.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        }
+      },
+      "Castle.Core/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "CommonServiceLocator/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Infusion.Trading.MarketData.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "AutoFixture": "3.20.0",
+          "Castle.Core": "3.3.1",
+          "Moq": "4.2.1507.118",
+          "Newtonsoft.Json": "7.0.1",
+          "NSubstitute": "1.8.1",
+          "NUnit": "2.6.4",
+          "TestStack.Dossier": "3.1.1"
+        }
+      },
+      "Microsoft.Composition/1.0.30": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll": {},
+          "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll": {}
+        }
+      },
+      "Moq/4.2.1507.118": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Moq.dll": {}
+        }
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NodaTime/2.0.0-alpha20160729": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NodaTime.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NodaTime.dll": {}
+        }
+      },
+      "NSubstitute/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NSubstitute.dll": {}
+        }
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
+      "ServiceStack/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Client": "1.0.0",
+          "ServiceStack.Common": "1.0.0",
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "ServiceStack.Text/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "TestStack.Dossier/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoFixture": "3.20.0",
+          "Castle.Core": "3.3.1",
+          "NSubstitute": "1.8.1"
+        },
+        "compile": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        }
+      },
+      "Unity/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "1.3.0"
+        },
+        "compile": {
+          "lib/net45/Microsoft.Practices.Unity.Configuration.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Practices.Unity.Configuration.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.dll": {},
+          "lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Infusion.Trading.MarketData.Models/1.0.0": {
+      "type": "project",
+      "path": "../Infusion.Trading.MarketData.Models/project.json"
+    },
+    "ServiceStack/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack/project.json"
+    },
+    "ServiceStack.Client/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Client/project.json"
+    },
+    "ServiceStack.Common/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Common/project.json"
+    },
+    "ServiceStack.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Interfaces/project.json"
+    },
+    "ServiceStack.Text/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Text/project.json"
+    },
+    "AutoFixture/3.20.0": {
+      "type": "package",
+      "sha512": "UIfprtG8FUwwpMpUHRo2OLNxlwj2dG454iYjdvqcPa5HHACCT6M6Sf7rMNeMfWhpZpXC9YuSChOtgBHx2NEbpQ==",
+      "files": [
+        "AutoFixture.3.20.0.nupkg",
+        "AutoFixture.3.20.0.nupkg.sha512",
+        "AutoFixture.nuspec",
+        "lib/net40/Ploeh.AutoFixture.dll",
+        "lib/net40/Ploeh.AutoFixture.XML",
+        "tools/Install.ps1"
+      ]
+    },
+    "Castle.Core/3.3.1": {
+      "type": "package",
+      "sha512": "uKAO6kDajKK1TkGx92WXnAjRypa+VfE82rM/Hnl68KcvCN14P0vfYi4tJDHmErtAcqFNBPI4m2PDB9uQX9hl5Q==",
+      "files": [
+        "ASL - Apache Software Foundation License.txt",
+        "BreakingChanges.txt",
+        "Castle.Core.3.3.1.nupkg",
+        "Castle.Core.3.3.1.nupkg.sha512",
+        "Castle.Core.nuspec",
+        "Changes.txt",
+        "lib/net35/Castle.Core.dll",
+        "lib/net35/Castle.Core.xml",
+        "lib/net40-client/Castle.Core.dll",
+        "lib/net40-client/Castle.Core.xml",
+        "lib/net45/Castle.Core.dll",
+        "lib/net45/Castle.Core.xml",
+        "lib/sl4/Castle.Core.dll",
+        "lib/sl4/Castle.Core.xml",
+        "lib/sl5/Castle.Core.dll",
+        "lib/sl5/Castle.Core.xml",
+        "License.txt",
+        "readme.txt"
+      ]
+    },
+    "CommonServiceLocator/1.3.0": {
+      "type": "package",
+      "sha512": "fbjO0SNwbOFPdwVfyqv+B7gIJ2CVBOFPKqn1mDDECK7KER8jFaOdcvroFYoAHa0ktPbxi5s+15qOLnA96f8GSA==",
+      "files": [
+        "CommonServiceLocator.1.3.0.nupkg",
+        "CommonServiceLocator.1.3.0.nupkg.sha512",
+        "CommonServiceLocator.nuspec",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.pdb",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.XML"
+      ]
+    },
+    "Microsoft.Composition/1.0.30": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "IDOxST2DCUziePSD2vK3Z7LI6e1rejJCp21/rKZ8fdsyTcq9SfnAV8udi0GSIpjO9wwSLZx9Kfc7co3PTs7IlA==",
+      "files": [
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.XML",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.XML",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.XML",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.XML",
+        "License-Stable.rtf",
+        "Microsoft.Composition.1.0.30.nupkg",
+        "Microsoft.Composition.1.0.30.nupkg.sha512",
+        "Microsoft.Composition.nuspec"
+      ]
+    },
+    "Moq/4.2.1507.118": {
+      "type": "package",
+      "sha512": "QfnD/kZcaV6mX1cWHta3yMn/d9ly9Q62yNmHQVArKaZcFcuFb4USYeHR/4XoA258WeJ2XfrGMPVQVIURRCoyNw==",
+      "files": [
+        "lib/net35/Moq.dll",
+        "lib/net35/Moq.xml",
+        "lib/net40/Moq.dll",
+        "lib/net40/Moq.xml",
+        "lib/sl5/Moq.Silverlight.dll",
+        "lib/sl5/Moq.Silverlight.xml",
+        "Moq.4.2.1507.118.nupkg",
+        "Moq.4.2.1507.118.nupkg.sha512",
+        "Moq.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/7.0.1": {
+      "type": "package",
+      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.7.0.1.nupkg",
+        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "NodaTime/2.0.0-alpha20160729": {
+      "type": "package",
+      "sha512": "wdhGpDLCfDd9/bPpa2LNKcl6PR6ZSXQFyt2cehfj4Q76TjObBC7sI4BQvjLdtooAsayxkNeGm6FKbfLFoixrag==",
+      "files": [
+        "build/NodaTime.targets",
+        "lib/native/_._",
+        "lib/net45/NodaTime.dll",
+        "lib/net45/NodaTime.xml",
+        "lib/netstandard1.1/NodaTime.dll",
+        "lib/netstandard1.1/NodaTime.xml",
+        "NodaTime.2.0.0-alpha20160729.nupkg",
+        "NodaTime.2.0.0-alpha20160729.nupkg.sha512",
+        "NodaTime.nuspec"
+      ]
+    },
+    "NSubstitute/1.8.1": {
+      "type": "package",
+      "sha512": "xeE8LLtsXebqXvTPVhERBy7QQSBhEiblPteWEvjVjcQWpX+uLgPrAp62u1uxB5aXgaxBdGXn+4FG+hiwhD9Xsw==",
+      "files": [
+        "acknowledgements.txt",
+        "BreakingChanges.txt",
+        "CHANGELOG.txt",
+        "lib/net35/NSubstitute.dll",
+        "lib/net35/NSubstitute.XML",
+        "lib/net40/NSubstitute.dll",
+        "lib/net40/NSubstitute.XML",
+        "lib/net45/NSubstitute.dll",
+        "lib/net45/NSubstitute.XML",
+        "LICENSE.txt",
+        "NSubstitute.1.8.1.nupkg",
+        "NSubstitute.1.8.1.nupkg.sha512",
+        "NSubstitute.nuspec",
+        "README.txt"
+      ]
+    },
+    "NUnit/2.6.4": {
+      "type": "package",
+      "sha512": "cmSPvaCMRSP0DI19FP1Liw9DyJY3E/vOY1OrVaeJBZpZFWHkmT3fB9ngGWnZX/ftvA7zJEbghEaw3Yd+u4YFAw==",
+      "files": [
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "license.txt",
+        "NUnit.2.6.4.nupkg",
+        "NUnit.2.6.4.nupkg.sha512",
+        "NUnit.nuspec"
+      ]
+    },
+    "TestStack.Dossier/3.1.1": {
+      "type": "package",
+      "sha512": "jRsObBGYhQ7nTSXTA3iQHOXmO17yIXlpZQQ6REi7v+Cf3S7YtntNFhWVZJ9DB0k1CCkOclKVp+T8NCXUOhMYtA==",
+      "files": [
+        "lib/NET40/TestStack.Dossier.dll",
+        "lib/NET40/TestStack.Dossier.xml",
+        "TestStack.Dossier.3.1.1.nupkg",
+        "TestStack.Dossier.3.1.1.nupkg.sha512",
+        "TestStack.Dossier.nuspec"
+      ]
+    },
+    "Unity/4.0.1": {
+      "type": "package",
+      "sha512": "RHFTCW13E186hCI0Z4R47tl2SyxQOp3TNaBlilxKktO+u+NUWyOK/nPJ25PWwgPh4j4/GM46PQszSsusui+ikw==",
+      "files": [
+        "lib/net45/Microsoft.Practices.Unity.Configuration.dll",
+        "lib/net45/Microsoft.Practices.Unity.Configuration.XML",
+        "lib/net45/Microsoft.Practices.Unity.dll",
+        "lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.dll",
+        "lib/net45/Microsoft.Practices.Unity.RegistrationByConvention.XML",
+        "lib/net45/Microsoft.Practices.Unity.xml",
+        "lib/portable-net45+wp80+win8+wpa81+MonoAndroid10+MonoTouch10/Microsoft.Practices.Unity.dll",
+        "lib/portable-net45+wp80+win8+wpa81+MonoAndroid10+MonoTouch10/Microsoft.Practices.Unity.xml",
+        "lib/win8/Microsoft.Practices.Unity.dll",
+        "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.dll",
+        "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.pri",
+        "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.XML",
+        "lib/win8/Microsoft.Practices.Unity.xml",
+        "lib/wp80/Microsoft.Practices.Unity.dll",
+        "lib/wp80/Microsoft.Practices.Unity.RegistrationByConvention.dll",
+        "lib/wp80/Microsoft.Practices.Unity.RegistrationByConvention.XML",
+        "lib/wp80/Microsoft.Practices.Unity.xml",
+        "Unity.4.0.1.nupkg",
+        "Unity.4.0.1.nupkg.sha512",
+        "Unity.nuspec",
+        "UnityConfiguration30.xsd"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.5.1": [
+      "Infusion.Trading.MarketData.Models >= 1.0.0-*",
+      "ServiceStack.Client >= 1.0.0-*",
+      "ServiceStack.Common >= 1.0.0-*",
+      "ServiceStack >= 1.0.0-*",
+      "ServiceStack.Interfaces >= 1.0.0-*",
+      "ServiceStack.Text >= 1.0.0-*",
+      "NodaTime >= 2.0.0-alpha20160729",
+      "CommonServiceLocator >= 1.3.0",
+      "Microsoft.Composition >= 1.0.30",
+      "Unity >= 4.0.1"
+    ]
+  }
+}

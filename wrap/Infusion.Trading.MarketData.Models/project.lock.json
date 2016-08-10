@@ -1,0 +1,276 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.5.1": {
+      "AutoFixture/3.20.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        }
+      },
+      "Castle.Core/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "Moq/4.2.1507.118": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Moq.dll": {}
+        }
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NSubstitute/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NSubstitute.dll": {}
+        }
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
+      "TestStack.Dossier/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoFixture": "3.20.0",
+          "Castle.Core": "3.3.1",
+          "NSubstitute": "1.8.1"
+        },
+        "compile": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.1/win7-x64": {
+      "AutoFixture/3.20.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Ploeh.AutoFixture.dll": {}
+        }
+      },
+      "Castle.Core/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "Moq/4.2.1507.118": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Moq.dll": {}
+        }
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NSubstitute/1.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NSubstitute.dll": {}
+        }
+      },
+      "NUnit/2.6.4": {
+        "type": "package",
+        "compile": {
+          "lib/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/nunit.framework.dll": {}
+        }
+      },
+      "TestStack.Dossier/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoFixture": "3.20.0",
+          "Castle.Core": "3.3.1",
+          "NSubstitute": "1.8.1"
+        },
+        "compile": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        },
+        "runtime": {
+          "lib/NET40/TestStack.Dossier.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutoFixture/3.20.0": {
+      "type": "package",
+      "sha512": "UIfprtG8FUwwpMpUHRo2OLNxlwj2dG454iYjdvqcPa5HHACCT6M6Sf7rMNeMfWhpZpXC9YuSChOtgBHx2NEbpQ==",
+      "files": [
+        "AutoFixture.3.20.0.nupkg",
+        "AutoFixture.3.20.0.nupkg.sha512",
+        "AutoFixture.nuspec",
+        "lib/net40/Ploeh.AutoFixture.dll",
+        "lib/net40/Ploeh.AutoFixture.XML",
+        "tools/Install.ps1"
+      ]
+    },
+    "Castle.Core/3.3.1": {
+      "type": "package",
+      "sha512": "uKAO6kDajKK1TkGx92WXnAjRypa+VfE82rM/Hnl68KcvCN14P0vfYi4tJDHmErtAcqFNBPI4m2PDB9uQX9hl5Q==",
+      "files": [
+        "ASL - Apache Software Foundation License.txt",
+        "BreakingChanges.txt",
+        "Castle.Core.3.3.1.nupkg",
+        "Castle.Core.3.3.1.nupkg.sha512",
+        "Castle.Core.nuspec",
+        "Changes.txt",
+        "lib/net35/Castle.Core.dll",
+        "lib/net35/Castle.Core.xml",
+        "lib/net40-client/Castle.Core.dll",
+        "lib/net40-client/Castle.Core.xml",
+        "lib/net45/Castle.Core.dll",
+        "lib/net45/Castle.Core.xml",
+        "lib/sl4/Castle.Core.dll",
+        "lib/sl4/Castle.Core.xml",
+        "lib/sl5/Castle.Core.dll",
+        "lib/sl5/Castle.Core.xml",
+        "License.txt",
+        "readme.txt"
+      ]
+    },
+    "Moq/4.2.1507.118": {
+      "type": "package",
+      "sha512": "QfnD/kZcaV6mX1cWHta3yMn/d9ly9Q62yNmHQVArKaZcFcuFb4USYeHR/4XoA258WeJ2XfrGMPVQVIURRCoyNw==",
+      "files": [
+        "lib/net35/Moq.dll",
+        "lib/net35/Moq.xml",
+        "lib/net40/Moq.dll",
+        "lib/net40/Moq.xml",
+        "lib/sl5/Moq.Silverlight.dll",
+        "lib/sl5/Moq.Silverlight.xml",
+        "Moq.4.2.1507.118.nupkg",
+        "Moq.4.2.1507.118.nupkg.sha512",
+        "Moq.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/7.0.1": {
+      "type": "package",
+      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.7.0.1.nupkg",
+        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "NSubstitute/1.8.1": {
+      "type": "package",
+      "sha512": "xeE8LLtsXebqXvTPVhERBy7QQSBhEiblPteWEvjVjcQWpX+uLgPrAp62u1uxB5aXgaxBdGXn+4FG+hiwhD9Xsw==",
+      "files": [
+        "acknowledgements.txt",
+        "BreakingChanges.txt",
+        "CHANGELOG.txt",
+        "lib/net35/NSubstitute.dll",
+        "lib/net35/NSubstitute.XML",
+        "lib/net40/NSubstitute.dll",
+        "lib/net40/NSubstitute.XML",
+        "lib/net45/NSubstitute.dll",
+        "lib/net45/NSubstitute.XML",
+        "LICENSE.txt",
+        "NSubstitute.1.8.1.nupkg",
+        "NSubstitute.1.8.1.nupkg.sha512",
+        "NSubstitute.nuspec",
+        "README.txt"
+      ]
+    },
+    "NUnit/2.6.4": {
+      "type": "package",
+      "sha512": "cmSPvaCMRSP0DI19FP1Liw9DyJY3E/vOY1OrVaeJBZpZFWHkmT3fB9ngGWnZX/ftvA7zJEbghEaw3Yd+u4YFAw==",
+      "files": [
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "license.txt",
+        "NUnit.2.6.4.nupkg",
+        "NUnit.2.6.4.nupkg.sha512",
+        "NUnit.nuspec"
+      ]
+    },
+    "TestStack.Dossier/3.1.1": {
+      "type": "package",
+      "sha512": "jRsObBGYhQ7nTSXTA3iQHOXmO17yIXlpZQQ6REi7v+Cf3S7YtntNFhWVZJ9DB0k1CCkOclKVp+T8NCXUOhMYtA==",
+      "files": [
+        "lib/NET40/TestStack.Dossier.dll",
+        "lib/NET40/TestStack.Dossier.xml",
+        "TestStack.Dossier.3.1.1.nupkg",
+        "TestStack.Dossier.3.1.1.nupkg.sha512",
+        "TestStack.Dossier.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.5.1": [
+      "AutoFixture >= 3.20.0",
+      "Castle.Core >= 3.3.1",
+      "Moq >= 4.2.1507.118",
+      "Newtonsoft.Json >= 7.0.1",
+      "NSubstitute >= 1.8.1",
+      "NUnit >= 2.6.4",
+      "TestStack.Dossier >= 3.1.1"
+    ]
+  }
+}

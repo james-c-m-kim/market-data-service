@@ -1,0 +1,85 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.5.1": {
+      "ServiceStack.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "ServiceStack.Text/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      }
+    },
+    ".NETFramework,Version=v4.5.1/win7-x64": {
+      "ServiceStack.Client/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1",
+        "dependencies": {
+          "ServiceStack.Interfaces": "1.0.0",
+          "ServiceStack.Text": "1.0.0"
+        }
+      },
+      "ServiceStack.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "ServiceStack.Text/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      }
+    }
+  },
+  "libraries": {
+    "ServiceStack.Client/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Client/project.json"
+    },
+    "ServiceStack.Common/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Common/project.json"
+    },
+    "ServiceStack.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Interfaces/project.json"
+    },
+    "ServiceStack.Text/1.0.0": {
+      "type": "project",
+      "path": "../ServiceStack.Text/project.json"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.5.1": [
+      "ServiceStack.Client >= 1.0.0-*",
+      "ServiceStack.Common >= 1.0.0-*",
+      "ServiceStack.Interfaces >= 1.0.0-*",
+      "ServiceStack.Text >= 1.0.0-*"
+    ]
+  }
+}

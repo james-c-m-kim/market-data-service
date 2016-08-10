@@ -8,7 +8,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace trade_demo_service.Controllers
 {
-    [Route("quotes")]
+    [Route("quote")]
     public class QuotesController : Controller
     {
         private readonly MdsRepository repository;
